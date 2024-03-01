@@ -9,7 +9,9 @@ package com.mycompany.hotelfollowers;
  * @author saram
  */
 public class Manager {
+
     static Reading lec = new Reading();
+    static Employee empleado;
     private String name;
     private int id;
     private String location;
@@ -25,6 +27,26 @@ public class Manager {
     public static void manageStaff(){
         System.out.println("Método para el manejo de personal");
         cantEmpleados = lec.leeryValidarInt("¿Cuantos empleados deseas asignar?");
+        String nombreEmpleado;
+        int id;
+        String locationEmpleado;
+        int horasTurno;
+        int inicioTurno;
+        int finTurno;
+        
+        for (int x=1; x <= cantEmpleados; x += 1){
+            System.out.println("Empleado #"+(x));
+            nombreEmpleado = lec.leerString("Nombre: ");
+            id = lec.leeryValidarInt("ID: ");
+            locationEmpleado = lec.leerString("Ubicación: ");
+            horasTurno = lec.leerIntRestricciones("¿Cuantas horas durará su turno?", 0, 10, "El turno debe durar minimo una hora"
+                    + " y hay un límite de 10 horas");
+            inicioTurno = lec.leerIntRestricciones("Hora de inicio: ", -1, 24, "Porfavor inidica la hora usando tiempo militar,"
+                    + " y los turnos comienzan y empiezan en horas en punto.");
+            finTurno = lec.leerIntRestricciones("Fin del turno: ", -1, 24, "Porfavor inidica la hora usando tiempo militar,"
+                    + " y los turnos comienzan y empiezan en horas en punto.");
+            empleado = new Employee(nombreEmpleado, id, locationEmpleado, horasTurno, inicioTurno, finTurno);
+        }
         
     }
 

@@ -8,10 +8,12 @@ package com.mycompany.hotelfollowers;
  *
  * @author juand
  */
+
 public class Chef extends Employee{
-    
-    public Chef(String name, float horasTurno, float inicioTurno, float finTurno) {
-        super(name, horasTurno, inicioTurno, finTurno);
+   
+    public Chef(String name, int id, String location, int horasTurno, int inicioTurno, int finTurno) {
+        super(name, id, location, horasTurno, inicioTurno, finTurno);
     }
+    
     
 }

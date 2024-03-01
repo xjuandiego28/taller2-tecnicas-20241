@@ -11,9 +11,12 @@ package com.mycompany.hotelfollowers;
 public class Recepcionist extends Employee{
     
     private int phoneNo;
-    
-    public Recepcionist(String name, float horasTurno, float inicioTurno, float finTurno) {
-        super(name, horasTurno, inicioTurno, finTurno);
+
+    public Recepcionist(int phoneNo, String name, int id, String location, int horasTurno, int inicioTurno, int finTurno) {
+        super(name, id, location, horasTurno, inicioTurno, finTurno);
+        this.phoneNo = phoneNo;
     }
+    
+    
     
 }

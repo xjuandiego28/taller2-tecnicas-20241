@@ -9,9 +9,12 @@ package com.mycompany.hotelfollowers;
  * @author juand
  */
 public class Housekeeping extends Employee {
-    
-    public Housekeeping(String name, float horasTurno, float inicioTurno, float finTurno) {
-        super(name, horasTurno, inicioTurno, finTurno);
+
+
+    public Housekeeping(String name, int id, String location, int horasTurno, int inicioTurno, int finTurno) {
+        super(name, id, location, horasTurno, inicioTurno, finTurno);
+
     }
+    
     
 }

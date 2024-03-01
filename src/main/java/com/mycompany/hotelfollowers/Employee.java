@@ -12,13 +12,15 @@ public class Employee {
     private String name;
     private int id;
     private String location;
-    private float horasTurno;
-    private float inicioTurno;
-    private float finTurno;
+    private int horasTurno;
+    private int inicioTurno;
+    private int finTurno;
    
 
-    public Employee(String name, float horasTurno, float inicioTurno, float finTurno) {
+    public Employee(String name, int id, String location, int horasTurno, int inicioTurno, int finTurno) {
         this.name = name;
+        this.id = id;
+        this.location = location;
         this.horasTurno = horasTurno;
         this.inicioTurno = inicioTurno;
         this.finTurno = finTurno;
@@ -36,7 +38,7 @@ public class Employee {
         return horasTurno;
     }
 
-    public void setHorasTurno(float horasTurno) {
+    public void setHorasTurno(int horasTurno) {
         this.horasTurno = horasTurno;
     }
 
@@ -44,7 +46,7 @@ public class Employee {
         return inicioTurno;
     }
 
-    public void setInicioTurno(float inicioTurno) {
+    public void setInicioTurno(int inicioTurno) {
         this.inicioTurno = inicioTurno;
     }
 
@@ -52,7 +54,7 @@ public class Employee {
         return finTurno;
     }
 
-    public void setFinTurno(float finTurno) {
+    public void setFinTurno(int finTurno) {
         this.finTurno = finTurno;
     }
     
