@@ -26,6 +26,5 @@ public class HotelFollowers {
         manager = new Manager(nombreManager,idManager,locationManager);
         System.out.println("Bienvenido" + nombreManager );
         manager.manageStaff();
-        
     }
 }

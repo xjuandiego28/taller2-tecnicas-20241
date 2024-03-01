@@ -46,6 +46,9 @@ public class Manager {
             finTurno = lec.leerIntRestricciones("Fin del turno: ", -1, 24, "Porfavor inidica la hora usando tiempo militar,"
                     + " y los turnos comienzan y empiezan en horas en punto.");
             empleado = new Employee(nombreEmpleado, id, locationEmpleado, horasTurno, inicioTurno, finTurno);
+            System.out.println("Acabas de asignar un turno para "+ nombreEmpleado + " en la ubicación " + locationEmpleado + 
+                    ", la duración de su turno es de " + horasTurno + " horas. Inicia a las " + inicioTurno + 
+                     " y termina a las " + finTurno);
         }
         
     }
