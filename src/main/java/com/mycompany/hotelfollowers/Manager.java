@@ -18,6 +18,11 @@ public class Manager {
         this.id = id;
         this.location = location;
     }
+    
+    public static void manageStaff(){
+        System.out.println("Método para el manejo de personal");
+        
+    }
 
     public String getName() {
         return name;
