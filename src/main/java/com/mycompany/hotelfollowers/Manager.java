@@ -9,10 +9,12 @@ package com.mycompany.hotelfollowers;
  * @author saram
  */
 public class Manager {
+    static Lectura lec = new Lectura();
     private String name;
     private int id;
     private String location;
     private int phoneNo;
+    static int cantEmpleados;
 
     public Manager(String name, int id, String location) {
         this.name = name;
@@ -22,6 +24,7 @@ public class Manager {
     
     public static void manageStaff(){
         System.out.println("Método para el manejo de personal");
+        cantEmpleados = lec.leeryValidarInt("¿Cuantos empleados deseas asignar?");
         
     }
 
