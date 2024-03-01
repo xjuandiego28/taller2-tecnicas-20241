@@ -12,6 +12,7 @@ public class Manager {
     private String name;
     private int id;
     private String location;
+    private int phoneNo;
 
     public Manager(String name, int id, String location) {
         this.name = name;
