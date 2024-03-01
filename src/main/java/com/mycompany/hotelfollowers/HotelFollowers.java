@@ -9,7 +9,7 @@ package com.mycompany.hotelfollowers;
  * @author saram
  */
 public class HotelFollowers {
-    static Lectura lec = new Lectura();
+    static Reading lec = new Reading();
     static Manager manager;
     static String nombreManager;
     static int idManager;
