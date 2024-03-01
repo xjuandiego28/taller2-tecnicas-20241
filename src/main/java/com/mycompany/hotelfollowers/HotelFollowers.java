@@ -25,7 +25,7 @@ public class HotelFollowers {
         locationManager = lec.leerString("Ubicación: ");
         manager = new Manager(nombreManager,idManager,locationManager);
         System.out.println("Bienvenido" + nombreManager );
-        
+        manager.manageStaff();
         
     }
 }

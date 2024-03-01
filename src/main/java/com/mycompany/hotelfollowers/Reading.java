@@ -15,12 +15,12 @@ public class Reading {
      Scanner sc = new Scanner(System.in);
      
     public int leerInt(String mensaje){
-        System.out.println(mensaje+": ");
+        System.out.println(mensaje);
         int dato = sc.nextInt();
         return dato;
     }
     public String leerString(String mensaje){
-        System.out.println(mensaje+": ");
+        System.out.println(mensaje);
         String dato = sc.next();
         return dato;
     }
@@ -89,6 +89,7 @@ public class Reading {
             dato = sc.nextInt();
             if(dato <= 0){
                 System.out.println("El número debe ser positivo");
+                System.out.println(mensajeError);
             }
             if (min>dato || dato>max){
                 System.out.println(mensajeError);
