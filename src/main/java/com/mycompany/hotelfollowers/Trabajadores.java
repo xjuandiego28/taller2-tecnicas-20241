@@ -13,6 +13,7 @@ public class Trabajadores {
     private float horasTurno;
     private float inicioTurno;
     private float finTurno;
+   
 
     public Trabajadores(String name, float horasTurno, float inicioTurno, float finTurno) {
         this.name = name;
