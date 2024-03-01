@@ -8,13 +8,15 @@ package com.mycompany.hotelfollowers;
  *
  * @author saram
  */
-public class Trabajadores {
+public class Empleado {
     private String name;
+    private int id;
+    private String location;
     private float horasTurno;
     private float inicioTurno;
     private float finTurno;
 
-    public Trabajadores(String name, float horasTurno, float inicioTurno, float finTurno) {
+    public Empleado(String name, float horasTurno, float inicioTurno, float finTurno) {
         this.name = name;
         this.horasTurno = horasTurno;
         this.inicioTurno = inicioTurno;
