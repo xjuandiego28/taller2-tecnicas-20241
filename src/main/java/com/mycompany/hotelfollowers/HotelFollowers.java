@@ -14,7 +14,7 @@ public class HotelFollowers {
     static String nombreManager;
     static int idManager;
     static String locationManager;
-    static int cantEmpleados;
+    
     
 
     public static void main(String[] args) {
@@ -25,7 +25,7 @@ public class HotelFollowers {
         locationManager = lec.leerString("Ubicación: ");
         manager = new Manager(nombreManager,idManager,locationManager);
         System.out.println("Bienvenido" + nombreManager );
-        cantEmpleados = lec.leeryValidarInt("¿Cuantos empleados deseas asignar?");
+        
         
     }
 }
