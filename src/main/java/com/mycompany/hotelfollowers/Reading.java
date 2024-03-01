@@ -10,7 +10,7 @@ package com.mycompany.hotelfollowers;
  */
 import java.util.Scanner;
 
-public class Lectura {
+public class Reading {
     
      Scanner sc = new Scanner(System.in);
      

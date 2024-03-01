@@ -8,7 +8,7 @@ package com.mycompany.hotelfollowers;
  *
  * @author juand
  */
-public class Housekeeping extends Empleado {
+public class Housekeeping extends Employee {
     
     public Housekeeping(String name, float horasTurno, float inicioTurno, float finTurno) {
         super(name, horasTurno, inicioTurno, finTurno);

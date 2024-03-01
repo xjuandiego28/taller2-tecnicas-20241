@@ -8,7 +8,7 @@ package com.mycompany.hotelfollowers;
  *
  * @author juand
  */
-public class Recepcionist extends Empleado{
+public class Recepcionist extends Employee{
     
     private int phoneNo;
     
