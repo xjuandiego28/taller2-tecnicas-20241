@@ -47,8 +47,8 @@ public class Manager {
                     + " y los turnos comienzan y empiezan en horas en punto.");
             horasTurno = finTurno-inicioTurno;
             if (finTurno< inicioTurno){
-                int acumulador = 24-finTurno;
-                horasTurno = acumulador+inicioTurno;
+                int acumulador = 24-inicioTurno;
+                horasTurno = acumulador+finTurno;
             }
             empleado = new Employee(nombreEmpleado, id, locationEmpleado, horasTurno, inicioTurno, finTurno);
             System.out.println("Acabas de asignar un turno para "+ nombreEmpleado + " en la ubicación " + locationEmpleado + 
