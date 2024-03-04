@@ -31,9 +31,12 @@ public class Manager {
         String nombreEmpleado;
         int id;
         String locationEmpleado;
+        int rol;
         int horasTurno = 0;
         int inicioTurno;
         int finTurno;
+        
+        String mensajeRol = null; //Variable
         
         for (int x=1; x <= cantEmpleados; x++){
             System.out.println("Empleado #"+(x));
@@ -50,8 +53,24 @@ public class Manager {
                 int acumulador = 24-inicioTurno;
                 horasTurno = acumulador+finTurno;
             }
+            
+            rol = lec.leerIntRestricciones("Elija uno de los roles para este empleado:\n"+
+                    "1) Chef\n2) Recepcionista\n3)Aseador/a", 0, 4, "Revise las opciones ingresadas");
+            
+            switch(rol){
+                case 1: 
+                    mensajeRol = "Chef";
+                    break;
+                case 2: 
+                    mensajeRol = "Recepcionista";
+                    break;
+                case 3:
+                    mensajeRol = "Aseador";
+                    break;
+            }
+            
             empleado = new Employee(nombreEmpleado, id, locationEmpleado, horasTurno, inicioTurno, finTurno);
-            System.out.println("Acabas de asignar un turno para "+ nombreEmpleado + " en la ubicación " + locationEmpleado + 
+            System.out.println("Acabas de asignar un turno para "+ nombreEmpleado+" "+(mensajeRol)+" en la ubicación " + locationEmpleado + 
                     ", la duración de su turno es de " + horasTurno + " horas. Inicia a las " + inicioTurno + 
                      " y termina a las " + finTurno);
         }
