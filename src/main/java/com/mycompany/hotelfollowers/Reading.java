@@ -97,7 +97,43 @@ public class Reading {
         }while (min>dato || dato>max || dato<=0);
         return dato;
     }
+        public long leeryValidarLong(String mensaje) {
+        long dato;
+        do {
+            System.out.print(mensaje);
+            while (!sc.hasNextLong()) {
+                System.out.println("Valor no válido");
+                sc.next();
+                System.out.print("Debe ser número entero positivo");
+            }
+            dato = sc.nextLong();
+            if(dato <= 0){
+                System.out.println("El número debe ser positivo");
+            }
+        } while (dato <= 0);
+        return dato;
+    }
     
+    public long leerLongRestricciones(String mensaje, long min, long max, String mensajeError){
+        long dato;
+        do {
+            System.out.println(mensaje);
+            while (!sc.hasNextLong()) {
+                System.out.println("Valor no válido");
+                sc.next();
+                System.out.print("Debe ser número entero positivo");
+            }
+            dato = sc.nextLong();
+            if(dato <= 0){
+                System.out.println("El número debe ser positivo");
+                System.out.println(mensajeError);
+            }
+            if (min>dato || dato>max){
+                System.out.println(mensajeError);
+            }
+        }while (min>dato || dato>max || dato<=0);
+        return dato;
+    }
     
     
 }

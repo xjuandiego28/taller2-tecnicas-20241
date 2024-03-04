@@ -15,10 +15,10 @@ public class Manager {
     private String name;
     private int id;
     private String location;
-    private int phoneNo;
+    private long phoneNo;
     static int cantEmpleados;
 
-    public Manager(String name, int id, String location, int phoneNo) {
+    public Manager(String name, int id, String location, long phoneNo) {
         this.name = name;
         this.id = id;
         this.location = location;
@@ -31,12 +31,9 @@ public class Manager {
         String nombreEmpleado;
         int id;
         String locationEmpleado;
-        int horasTurno;
+        int horasTurno = 0;
         int inicioTurno;
         int finTurno;
-        
-        //Variables de la clase
-        int rolEmpleado;
         
         for (int x=1; x <= cantEmpleados; x++){
             System.out.println("Empleado #"+(x));
@@ -44,19 +41,15 @@ public class Manager {
             id = lec.leeryValidarInt("ID: ");
             locationEmpleado = lec.leerString("Ubicación: ");
             
-            rolEmpleado = lec.leerIntRestricciones("Selecciona el cargo que deseas asignar:\n1) Chef\n2)Recepcionista\n3)Aseo", 0, 4, "Revisa bien las opciones de cargos");
-            switch (rolEmpleado){
-                case 1: System.out.println("Chef");
-                case 2: System.out.println("Recepcionista");
-                case 3: System.out.println("Aseo");
-            } 
-            
-            horasTurno = lec.leerIntRestricciones("¿Cuantas horas durará su turno?", 0, 10, "El turno debe durar minimo una hora"
-                    + " y hay un límite de 10 horas");
             inicioTurno = lec.leerIntRestricciones("Hora de inicio: ", -1, 24, "Porfavor inidica la hora usando tiempo militar,"
                     + " y los turnos comienzan y empiezan en horas en punto.");
             finTurno = lec.leerIntRestricciones("Fin del turno: ", -1, 24, "Porfavor inidica la hora usando tiempo militar,"
                     + " y los turnos comienzan y empiezan en horas en punto.");
+            horasTurno = finTurno-inicioTurno;
+            if (finTurno< inicioTurno){
+                int acumulador = 24-finTurno;
+                horasTurno = acumulador+inicioTurno;
+            }
             empleado = new Employee(nombreEmpleado, id, locationEmpleado, horasTurno, inicioTurno, finTurno);
             System.out.println("Acabas de asignar un turno para "+ nombreEmpleado + " en la ubicación " + locationEmpleado + 
                     ", la duración de su turno es de " + horasTurno + " horas. Inicia a las " + inicioTurno + 
@@ -105,11 +98,11 @@ public class Manager {
         Manager.empleado = empleado;
     }
 
-    public int getPhoneNo() {
+    public long getPhoneNo() {
         return phoneNo;
     }
 
-    public void setPhoneNo(int phoneNo) {
+    public void setPhoneNo(long phoneNo) {
         this.phoneNo = phoneNo;
     }
 
