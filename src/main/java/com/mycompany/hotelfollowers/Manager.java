@@ -18,10 +18,11 @@ public class Manager {
     private int phoneNo;
     static int cantEmpleados;
 
-    public Manager(String name, int id, String location) {
+    public Manager(String name, int id, String location, int phoneNo) {
         this.name = name;
         this.id = id;
         this.location = location;
+        this.phoneNo = phoneNo;
     }
     
     public static void manageStaff(){
@@ -34,11 +35,22 @@ public class Manager {
         int inicioTurno;
         int finTurno;
         
-        for (int x=1; x <= cantEmpleados; x += 1){
+        //Variables de la clase
+        int rolEmpleado;
+        
+        for (int x=1; x <= cantEmpleados; x++){
             System.out.println("Empleado #"+(x));
             nombreEmpleado = lec.leerString("Nombre: ");
             id = lec.leeryValidarInt("ID: ");
             locationEmpleado = lec.leerString("Ubicación: ");
+            
+            rolEmpleado = lec.leerIntRestricciones("Selecciona el cargo que deseas asignar:\n1) Chef\n2)Recepcionista\n3)Aseo", 0, 4, "Revisa bien las opciones de cargos");
+            switch (rolEmpleado){
+                case 1: System.out.println("Chef");
+                case 2: System.out.println("Recepcionista");
+                case 3: System.out.println("Aseo");
+            } 
+            
             horasTurno = lec.leerIntRestricciones("¿Cuantas horas durará su turno?", 0, 10, "El turno debe durar minimo una hora"
                     + " y hay un límite de 10 horas");
             inicioTurno = lec.leerIntRestricciones("Hora de inicio: ", -1, 24, "Porfavor inidica la hora usando tiempo militar,"
@@ -75,6 +87,38 @@ public class Manager {
 
     public void setLocation(String location) {
         this.location = location;
+    }
+
+    public static Reading getLec() {
+        return lec;
+    }
+
+    public static void setLec(Reading lec) {
+        Manager.lec = lec;
+    }
+
+    public static Employee getEmpleado() {
+        return empleado;
+    }
+
+    public static void setEmpleado(Employee empleado) {
+        Manager.empleado = empleado;
+    }
+
+    public int getPhoneNo() {
+        return phoneNo;
+    }
+
+    public void setPhoneNo(int phoneNo) {
+        this.phoneNo = phoneNo;
+    }
+
+    public static int getCantEmpleados() {
+        return cantEmpleados;
+    }
+
+    public static void setCantEmpleados(int cantEmpleados) {
+        Manager.cantEmpleados = cantEmpleados;
     }
     
     

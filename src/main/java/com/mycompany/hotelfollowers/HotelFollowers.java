@@ -14,6 +14,7 @@ public class HotelFollowers {
     static String nombreManager;
     static int idManager;
     static String locationManager;
+    static int phoneManager;
     
     
 
@@ -23,7 +24,8 @@ public class HotelFollowers {
         nombreManager = lec.leerString("Nombre: ");
         idManager = lec.leeryValidarInt("ID: ");
         locationManager = lec.leerString("Ubicación: ");
-        manager = new Manager(nombreManager,idManager,locationManager);
+        phoneManager = lec.leerInt("Número de teléfono: ");
+        manager = new Manager(nombreManager,idManager,locationManager, phoneManager);
         System.out.println("Bienvenido" + nombreManager );
         manager.manageStaff();
     }
