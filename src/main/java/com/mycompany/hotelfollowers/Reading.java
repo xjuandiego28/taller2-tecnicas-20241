@@ -15,17 +15,18 @@ public class Reading {
      Scanner sc = new Scanner(System.in);
      
     public int leerInt(String mensaje){
-        System.out.println(mensaje);
+        System.out.print(mensaje);
         int dato = sc.nextInt();
         return dato;
     }
     public String leerString(String mensaje){
-        System.out.println(mensaje);
+        System.out.print(mensaje);
         String dato = sc.next();
+        dato += sc.nextLine(); //garantizar lectura de la palabra completa
         return dato;
     }
     public Float leerFloat(String mensaje){
-        System.out.println(mensaje);
+        System.out.print(mensaje);
         Float dato = sc.nextFloat();
         return dato;
     }
@@ -33,7 +34,7 @@ public class Reading {
     public Float leerFloatRestricciones(String mensaje, int min, int max){
         Float dato;
         do{
-            System.out.println(mensaje);
+            System.out.print(mensaje);
             dato = sc.nextFloat();
             if (dato<min || dato>max){
                 System.out.println("Ingresa un número valido, dentro del rango " + min + " - " + max);
@@ -43,7 +44,7 @@ public class Reading {
     }
     
     public Double leerDouble(String mensaje){
-        System.out.println(mensaje);
+        System.out.print(mensaje);
         Double dato = sc.nextDouble();
         return dato;
     }
@@ -51,7 +52,7 @@ public class Reading {
     public Double leerDoubleRestricciones(String mensaje, int min, int max){
         Double dato;
         do{
-            System.out.println(mensaje);
+            System.out.print(mensaje);
             dato = sc.nextDouble();
             if (dato<min || dato>max){
                 System.out.println("Ingresa un número valido, dentro del rango " + min + " - " + max);
@@ -67,7 +68,7 @@ public class Reading {
             while (!sc.hasNextInt()) {
                 System.out.println("Valor no válido");
                 sc.next();
-                System.out.print("Debe ser número entero positivo");
+                System.out.println("Debe ser número entero positivo");
             }
             dato = sc.nextInt();
             if(dato <= 0){
@@ -80,7 +81,7 @@ public class Reading {
     public int leerIntRestricciones(String mensaje, int min, int max, String mensajeError){
         int dato;
         do {
-            System.out.println(mensaje);
+            System.out.print(mensaje);
             while (!sc.hasNextInt()) {
                 System.out.println("Valor no válido");
                 sc.next();
@@ -117,7 +118,7 @@ public class Reading {
     public long leerLongRestricciones(String mensaje, long min, long max, String mensajeError){
         long dato;
         do {
-            System.out.println(mensaje);
+            System.out.print(mensaje);
             while (!sc.hasNextLong()) {
                 System.out.println("Valor no válido");
                 sc.next();

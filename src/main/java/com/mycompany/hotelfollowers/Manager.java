@@ -16,7 +16,7 @@ public class Manager {
     private int id;
     private String location;
     private long phoneNo;
-    static int cantEmpleados;
+    private static int cantEmpleados;
 
     public Manager(String name, int id, String location, long phoneNo) {
         this.name = name;
